@@ -12,9 +12,15 @@ pipeline {
         sh 'echo "Second Step"'
       }
     }
-    stage('Final') {
+    stage('Third') {
       steps {
-        sh 'echo "DONE"'
+        sh '''echo "Docker step"
+yum install docker -y '''
+      }
+    }
+    stage('Final Step') {
+      steps {
+        sh 'echo "Completed Pipeline"'
       }
     }
   }

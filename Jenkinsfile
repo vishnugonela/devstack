@@ -1,12 +1,6 @@
 pipeline {
-  agent none
+  agent any
   stages {
-    stage('1st') {
-      steps {
-        sh 'echo "Hello World"'
-      }
-    }
-
     stage('2nd') {
       parallel {
         stage('2nd') {

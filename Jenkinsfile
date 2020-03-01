@@ -2,20 +2,8 @@ pipeline {
   agent none
   stages {
     stage('1st') {
-      parallel {
-        stage('1st') {
-          steps {
-            sh 'echo "Hello World"'
-            sleep 2
-          }
-        }
-
-        stage('1.1') {
-          steps {
-            sh 'echo "Parallel Process Step"'
-          }
-        }
-
+      steps {
+        sh 'echo "Hello World"'
       }
     }
 

@@ -42,13 +42,6 @@ pipeline {
       }
     }
 
-    stage('Third') {
-      steps {
-        sh '''echo "Docker step"
-yum install docker -y || echo "Not able install docker"'''
-      }
-    }
-
     stage('Final Step') {
       steps {
         sh 'echo "Completed Pipeline"'
